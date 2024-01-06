@@ -46,6 +46,25 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          // added these fields to match default .md strucutre for blog posts
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "pubDate",
+            label: "Publication Date",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "heroImage",
+            label: "Hero Image",
+            accept: [".jpg"], // restricts file selection to .jpg images
+          },
         ],
       },
     ],
