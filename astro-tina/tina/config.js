@@ -67,6 +67,39 @@ export default defineConfig({
           },
         ],
       },
+      // new collection for homepage that is restricted to a single file
+      {
+        name: "home",
+        label: "Homepage",
+        path: "src/content/home",
+        ui: {
+          // Don't allow editors to create new navigation items
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 });
